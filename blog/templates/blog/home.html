@@ -1,0 +1,61 @@
+{% extends 'blog/../base.html' %}
+{% load static %}
+
+{% block main %}
+          <div >
+
+			<div class="mySlides fade">
+			  <img src="{% static "images/02.jpg" %}">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="{% static "images/04.jpg" %}">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="{% static "images/05.jpg" %}">
+			</div>
+
+			</div>
+
+
+			<div class='slideshow'>
+			  <span class="dot"></span>
+			  <span class="dot"></span>
+			  <span class="dot"></span>
+			</div>
+    <div  class='thirdbox'>
+				<h1 align='center'>
+						Welcome to arham
+				</h1>
+
+				<div class='notice'>
+					<h3 align='center'>Notices</h3>
+					<marquee  direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+						<p>To bismillakhans@gmail.com </p>
+						<p>List of documents submitted in phase I </p>
+						1. Next Workshop Brochure (attachment === 2018brochure.pdf) <br>
+						2. Photographs of the Book Release Function(will be sent later)<br>
+						3. Web Site Emblem.(attachment=== imrtemblem.png)<br>
+						4. Governing Body list (attachment=== GBList.pdf) <br>
+						5. Expecting website address: www.imrtkerala.com
+						<p>Forwarded by </p>
+						Secretary, IMRT
+					</marquee>
+
+				</div>
+				<div class='intro'>
+
+					<ul>
+						<li>About 2 decades of excellence in the field of multi-disciplinary education </li>
+						<li>Shaped careers of more than 20000 students from over 40 countries </li>
+						<li>Signed M.O.Us with top 22 universities / colleges in 7 countries such as USA, UK, Vietnam, Kuwait, Bahrain, Sudan and Afghanistan </li>
+						<li>Recipient of more than 25 National and International awards </li>
+						<li>Awarded over 800 scholarships to underprivileged and meritorious students </li>
+					</ul>
+				</div>
+			</div>
+
+            {% endblock %}
+
+

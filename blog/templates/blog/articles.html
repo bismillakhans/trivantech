@@ -1,0 +1,45 @@
+{% extends 'blog/../base.html' %}
+{% load static %}
+{% block title %}
+IMRT Blog
+{% endblock %}
+
+
+{% block main %}
+
+            <div class="row">
+                    <center><h1>Articles</h1></center>
+        {% for post in posts %}
+        <div class="row">
+                <article class="col-xs-10">
+
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.short_desc }}</p>
+
+                    <p><a href="{{ post.get_absolute_url }}" >Read More</a></p>
+                    <p class="pull-right">
+
+                       <!-- <span class="label label-default">sss</span></p> -->
+                    <ul class="list-inline">
+                        <li>Posted:{{ post.post_date }}</li>
+{#                        <li><a href="#"><span class="glyphicon glyphicon-comment"></span> {{ post.comment.all.count }} Comments</a></li>#}
+
+                    </ul>
+                </article>
+
+
+
+                <hr>
+
+            </div>
+            </div>
+
+
+
+                {% endfor %}
+
+
+
+            {% endblock %}
+
+

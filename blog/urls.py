@@ -18,7 +18,10 @@ from  . import views
 # from django.conf import settings
 # from django.conf.urls.static import static
 
+app_name='blog'
+
 urlpatterns = [
-path('', views.index, name='home')
+path('', views.index, name='home'),
+path('articles/', views.BlogListView.as_view(), name='articles'),
 
 ]
