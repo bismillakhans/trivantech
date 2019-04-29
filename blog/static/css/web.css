@@ -1,0 +1,122 @@
+
+body{
+	background-color:#eff1f2;
+}
+.icon{
+	margin : -5px 100px;
+	position:absolute;
+	padding: 60px 60px;
+	background-size:cover;
+	border: none;
+}
+h1{
+	font-family : Trebuchet MS;
+}
+.mySlides {display: none;}
+img {
+	width:100%;
+	
+}
+
+.slideshow{
+	margin: -40px 0;
+	padding: 0px 46%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  
+  height: 15px;
+  width: 15px;
+  margin: 0px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.secondbox{
+	padding : 20px 20px;
+	background-color : #3d3e3f;
+}
+
+.thirdbox{
+	margin : 150px 0;
+	
+}
+.notice{
+	font-family : Trebuchet MS;
+	margin : 40px 80px;
+	float: left;
+	width : 350px;
+	background-color:white;
+}
+.intro{
+
+  float: left;
+  width: 50%;
+  font-family : Trebuchet MS;
+}
+
+h3{
+	font-family : Trebuchet MS;
+	background-color : #3d3e3f;
+	margin : 0px 0px;
+	color : white;
+	padding : 10px 0px;
+}
+.lowerbox{
+	
+	float : left;
+	background-color : #3d3e3f;
+	padding :50px 0px;
+	width : 100%;
+}
+
+a{
+	font-family : Trebuchet MS;
+	margin : 0px 20px;
+	text-decoration:none;
+	font-color:white;
+	font-size : 20px;
+	color : #cfd2d3;
+}
+a:hover{
+	color:white;
+}
+@media only screen and (max-width: 1500px) {
+  
+}
+.footer{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+	background-color : #3d3e3f;
+	padding :50px 0px;
+}
