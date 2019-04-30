@@ -1,45 +1,59 @@
-{% extends 'blog/../base.html' %}
+{% extends 'base.html' %}
 {% load static %}
-{% block title %}
-IMRT Blog
-{% endblock %}
+{#{% block title %}#}
+{#IMRT Blog#}
+{#{% endblock %}#}
 
 
 {% block main %}
 
-            <div class="row">
-                    <center><h1>Articles</h1></center>
-        {% for post in posts %}
-        <div class="row">
-                <article class="col-xs-10">
 
-                    <h1>{{ post.title }}</h1>
-                    <p>{{ post.short_desc }}</p>
 
-                    <p><a href="{{ post.get_absolute_url }}" >Read More</a></p>
-                    <p class="pull-right">
+                               <div class="wrapper">
 
-                       <!-- <span class="label label-default">sss</span></p> -->
-                    <ul class="list-inline">
-                        <li>Posted:{{ post.post_date }}</li>
+                                       <div class="top"><div class="title"><center><h1>Articles</h1></center></div></div>
+                  <div class="content">
+                         {% for post in posts %}
+                    <div class="card first">
+                      <h2><a href="#">{{ post.title }}</a></h2>
+                      <p class="date">{{ post.post_date }}</p>
+                      <p class="text">{{ post.short_desc }} </p>
+
+                    </div>
+                  </div>
+                          </div>
+
+
+
+
+{#        <div class="row">#}
+{#                <article class="col-xs-10">#}
+{##}
+{#                    <h1></h1>#}
+{#                    <p>{{ post.short_desc }}</p>#}
+{##}
+{#                    <p><a href="{{ post.get_absolute_url }}" >Read More</a></p>#}
+{#                    <p class="pull-right">#}
+{##}
+{#                       <!-- <span class="label label-default">sss</span></p> -->#}
+{#                    <ul class="list-inline">#}
+{#                        <li>Posted:{{ post.post_date }}</li>#}
 {#                        <li><a href="#"><span class="glyphicon glyphicon-comment"></span> {{ post.comment.all.count }} Comments</a></li>#}
+{##}
+{#                    </ul>#}
+{#                </article>#}
 
-                    </ul>
-                </article>
 
 
 
-                <hr>
 
-            </div>
-            </div>
+
 
 
 
                 {% endfor %}
 
 
-
-            {% endblock %}
+{% endblock %}
 
 

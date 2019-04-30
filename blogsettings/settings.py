@@ -25,7 +25,7 @@ SECRET_KEY = 'f^dyzga-6%(tt*(^mf1awgj=sr*)951r38p*471teegzd8xxp3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'ckeditor',
+    'django_extensions',
     'taggit'
 ]
 

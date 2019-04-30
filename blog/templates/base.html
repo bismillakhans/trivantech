@@ -3,7 +3,12 @@
 <html>
 	<head>
 		<link href="{% static "css/web.css" %}" rel="stylesheet">
-		<link rel="stylesheet" href="">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+{#        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">#}
+{#        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>#}
+{#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>#}
+{#		<link rel="stylesheet" href="">#}
 	</head>
 	<body>
 			<div>
@@ -16,9 +21,9 @@
 			<div class='secondbox'>
 				<table>
 					<tr>
-						<td><a href='web.html' style='color:white'>Home</a></td>
-						<td><a href='vision and mission.html'>Vision and misson </a></td>
-						<td><a href='members.html'>Members </a></td>
+						<td><a href='/' style='color:white'>Home</a></td>
+						<td><a href="{% url "blog:articles" %}">Vision and misson </a></td>
+						<td><a href="{% url "blog:about" %}">Members </a></td>
 						<td><a href='gallery.html'>Gallery </a></td>
 						<td><a href='contact.html'>Contact us </a></td>
 						<td><a href='resources.html'>Resources</a></td>

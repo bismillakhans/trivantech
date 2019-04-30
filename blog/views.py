@@ -17,3 +17,7 @@ class BlogListView(ListView):
     context_object_name = 'posts'
     queryset = Post.objects.filter(status=True)
     ordering = ['-post_update',]
+
+def about(request):
+    template = "blog/about.html"
+    return render(request,template)
