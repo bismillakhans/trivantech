@@ -39,6 +39,11 @@ class GalleryListView(ListView):
     queryset = Gallery.objects.filter(status=True)
     ordering = ['-g_date',]
 
+class WorkListView(ListView):
+    model = Work
+    template_name = "blog/works.html"
+    context_object_name = 'works'
+
 def about(request):
     template = "blog/about.html"
     return render(request,template)
