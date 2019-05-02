@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'ckeditor',
     'django_extensions',
-    'taggit'
+    'taggit',
+    'bootstrap4'
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,7 @@ USE_TZ = True
 
 STATIC_ROOT= os.path.join(BASE_DIR,'static/')
 STATIC_URL = '/static/'
+
+
+MEDIA_ROOT= os.path.join(BASE_DIR,'media/')
+MEDIA_URL = '/media/'

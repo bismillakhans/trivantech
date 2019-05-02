@@ -132,9 +132,9 @@ body{
   overflow: hidden;
 }
 .top{
-  background: #FF4444;
+  background: rgba(43, 43, 43, 0.87);
   height: 180px;
-  border-top: 20px solid #CC0000;
+  border-top: 20px solid rgba(64, 7, 79, 0.57);
 }
 
 .top .title {

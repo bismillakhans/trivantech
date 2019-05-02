@@ -1,59 +1,41 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% load static %}
-{#{% block title %}#}
-{#IMRT Blog#}
-{#{% endblock %}#}
-
-
 {% block main %}
+ <section class="probootstrap-section probootstrap-section-colored">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate mb0">
+              <h1 class="mb0">Our Articles</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
 
-
-
-                               <div class="wrapper">
-
-                                       <div class="top"><div class="title"><center><h1>Articles</h1></center></div></div>
-                  <div class="content">
-                         {% for post in posts %}
-                    <div class="card first">
-                      <h2><a href="#">{{ post.title }}</a></h2>
-                      <p class="date">{{ post.post_date }}</p>
-                      <p class="text">{{ post.short_desc }} </p>
-
-                    </div>
+{% for post in posts %}
+              <div class="col-md-6">
+              <div class="probootstrap-service-2 probootstrap-animate">
+                <div class="image">
+                  <div class="image-bg">
+                    <img src="img/img_sm_3.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
                   </div>
-                          </div>
+                </div>
+                <div class="text">
+                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> {{ post.post_date }}</span>
+                  <h3>{{ post.title }}</h3>
+                    <p>{{ post.short_desc }}</p>
+                  <p><a href="#" class="btn btn-primary">Read More..</a> </p>
+                </div>
+              </div>
+            </div>
+{% endfor %}
 
 
+          </div>
+        </div>
 
-
-{#        <div class="row">#}
-{#                <article class="col-xs-10">#}
-{##}
-{#                    <h1></h1>#}
-{#                    <p>{{ post.short_desc }}</p>#}
-{##}
-{#                    <p><a href="{{ post.get_absolute_url }}" >Read More</a></p>#}
-{#                    <p class="pull-right">#}
-{##}
-{#                       <!-- <span class="label label-default">sss</span></p> -->#}
-{#                    <ul class="list-inline">#}
-{#                        <li>Posted:{{ post.post_date }}</li>#}
-{#                        <li><a href="#"><span class="glyphicon glyphicon-comment"></span> {{ post.comment.all.count }} Comments</a></li>#}
-{##}
-{#                    </ul>#}
-{#                </article>#}
-
-
-
-
-
-
-
-
-
-                {% endfor %}
-
+    </section>
 
 {% endblock %}
-
-

@@ -21,3 +21,5 @@ class BlogListView(ListView):
 def about(request):
     template = "blog/about.html"
     return render(request,template)
+class test(TemplateView):
+    template_name = 'base2.html'
