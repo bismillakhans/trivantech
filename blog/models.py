@@ -137,7 +137,7 @@ class Member(models.Model):
 
 
 class Gallery(models.Model):
-    title = models.CharField(max_length=70)
+    title = models.CharField(max_length=70,null=True,blank=True)
     img = models.ImageField(upload_to='gallery', default="download.jpeg")
     status = models.BooleanField(default=True, verbose_name="Approve")
     g_date = models.DateTimeField(auto_now_add=True)

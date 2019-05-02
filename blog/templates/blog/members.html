@@ -1,0 +1,46 @@
+{% extends 'base2.html' %}
+{% load bootstrap4 %}
+
+{% block main %}
+<section>
+    <div>
+        <div class="row">
+           
+            <section class="probootstrap-section probootstrap-section-colored">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate mb0">
+              <h1 class="mb0">MEMBERS LIST</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+                <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+     <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>ADDRESS</th>
+        <th>POSTION</th>
+      </tr>
+    </thead>
+    <tbody>
+ {% for member in members %}
+
+      <tr>
+        <td>{{ member.name }}<br>{{ member.invigilation }}<br>{{ member.department }}<br>{{ member.organisation }}<br></td>
+        <td>{{ member.address }}</td>
+        <td>{{ member.position }}<br></td>
+      </tr>
+
+    </tbody>
+         {% endfor %}
+  </table>
+
+        </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
