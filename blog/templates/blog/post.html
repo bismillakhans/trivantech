@@ -1,0 +1,28 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block main %}
+ <section class="probootstrap-section probootstrap-section-colored">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate mb0">
+              <h1 class="mb0">{{ post.title }}</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+              posted by:{{ post.post_date }}
+            <h2>Summary:{{ post.short_desc }}</h2>
+
+             {{ post.body|safe }}
+
+
+
+          </div>
+        </div>
+
+    </section>
+
+{% endblock %}

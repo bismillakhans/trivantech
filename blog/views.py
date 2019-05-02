@@ -23,3 +23,10 @@ def about(request):
     return render(request,template)
 class test(TemplateView):
     template_name = 'base2.html'
+
+def post_view(request, year, month, slug):
+    template = 'blog/post.html'
+    post = get_object_or_404(Post, post_date__year=year,
+                             post_date__month=month, slug=slug)
+    context = {'post': post}
+    return render(request,'blog/post.html',context)
