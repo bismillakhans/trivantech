@@ -124,7 +124,7 @@ class Member(models.Model):
         choices=positions,
     )
     invigilation = models.CharField(max_length=250, verbose_name="Invigilation ")
-    phone = models.CharField(max_length=10)
+    phone = models.CharField(max_length=10,blank=True)
     email = models.EmailField(max_length=70, blank=True)
     organisation = models.CharField(max_length=250, verbose_name="Organization / Institution")
     department = models.CharField(max_length=250, verbose_name="Department ")

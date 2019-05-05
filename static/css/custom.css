@@ -1,1 +1,11 @@
 /* Your custom css code goes here */
+.icon1{
+	width : 85px;
+
+	margin : 2px 0px;
+}
+.pageTitle{
+	margin : 30px 100px;
+	position:absolute;
+
+}

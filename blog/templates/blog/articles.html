@@ -19,7 +19,13 @@
               <div class="probootstrap-service-2 probootstrap-animate">
                 <div class="image">
                   <div class="image-bg">
-                    <img src="img/img_sm_3.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+
+                      {% if post.img %}
+                          <img src="{{ post.img.url }}" alt="{{ post.img.url }}">
+                      {% else %}
+                          <img src="{% static 'images/download.png' %}">
+                      {% endif %}
+
                   </div>
                 </div>
                 <div class="text">
