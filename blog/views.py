@@ -64,3 +64,10 @@ class RegisterStudent(CreateView):
 
 class RegSuccess(TemplateView):
     template_name = "blog/reg_success.html"
+
+def post_search(request):
+    query = request.GET.get('q')
+    results = Post.objects.filter(title__icontains=query)
+    context = {'posts': results, 'query': query}
+
+    return render(request, 'blog/search.html', context)

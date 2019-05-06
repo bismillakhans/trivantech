@@ -1,0 +1,62 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block main %}
+ <section class="probootstrap-section probootstrap-section-colored">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate mb0">
+              <h1 class="mb0">Search Results....</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+{% if posts %}
+                <div class="container">
+                    <h1 class="margin-top">Results Found... <span class="text-primary">
+                            "{{ query|truncatechars:20 }}"</span></h1>
+                        <hr>
+                </div>
+
+
+{% endif %}
+    {% for post in posts %}
+              <div class="col-md-6">
+              <div class="probootstrap-service-2 probootstrap-animate">
+                <div class="image">
+                  <div class="image-bg">
+
+                      {% if post.img %}
+                          <img src="{{ post.img.url }}" alt="{{ post.img.url }}">
+                      {% else %}
+                          <img src="{% static 'images/download.png' %}">
+                      {% endif %}
+
+                  </div>
+                </div>
+                <div class="text">
+                  <span class="probootstrap-meta"><i class="icon-calendar2"></i> {{ post.post_date }}</span>
+                  <h3>{{ post.title }}</h3>
+                    <p>{{ post.short_desc }}</p>
+                  <p><a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More..</a> </p>
+                </div>
+              </div>
+            </div>
+     {% empty %}
+     <div class="margin-top"><h1>Sorry No Resultes Found<span class="text-primary">
+                        "{{ query|truncatechars:30 }}"</span>
+                    </h1>
+                    </div>
+                        <h2><a href="/">Back To Home</a></h2>
+    {% endfor %}
+
+
+
+          </div>
+        </div>
+
+    </section>
+
+{% endblock %}

@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{%  static 'css/styles-merged.css'%}">
     <link rel="stylesheet" href="{%  static 'css/style.min.css'%}">
     <link rel="stylesheet" href="{%  static 'css/custom.css'%}">
+           <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+
       <style>
           @font-face {
   font-family: 'icomoon';
@@ -40,8 +42,8 @@
 
     <div class="probootstrap-search" id="probootstrap-search">
       <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
-      <form action="#">
-        <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
+      <form action="/search">
+        <input type="search" name="q" id="search" placeholder="Search a keyword and hit enter...">
       </form>
     </div>
 

@@ -17,7 +17,7 @@ path('gallery/', views.GalleryListView.as_view(), name='gallery'),
 path('documents/', views.DocumentListView.as_view(), name='documents'),
 path('members/', views.MemberListView.as_view(), name='members'),
 path('works/',views.WorkListView.as_view(),name="works"),
-
+path('search/', views.post_search, name='search'),
 
 path('<int:year>/<int:month>/<slug:slug>', views.post_view, name='post'),
 path('about/', views.about, name='about'),

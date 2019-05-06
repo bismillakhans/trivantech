@@ -50,7 +50,7 @@ class Post(models.Model):
     post_update = ModificationDateTimeField()
     short_desc = models.TextField(max_length=250)
     img = models.ImageField(upload_to='img', blank=True,null=True)
-    status = models.BooleanField(default=False, verbose_name="Approve Post")
+    status = models.BooleanField(default=True, verbose_name="Approve Post")
     body = RichTextField()
 
     def __str__(self):
