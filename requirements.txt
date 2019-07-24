@@ -6,3 +6,6 @@ django-taggit==1.1.0
 pytz==2019.1
 six==1.12.0
 sqlparse==0.3.0
+pillow
+psycopg2-binary
+django-bootstrap4
